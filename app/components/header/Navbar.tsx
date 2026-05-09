@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <header className='sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-xl'>
+    <header className='sticky top-0 z-999 w-full border-b border-gray-100 bg-white/80 backdrop-blur-xl'>
       <nav className='mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 lg:px-8'>
         
         {/* LOGO */}
