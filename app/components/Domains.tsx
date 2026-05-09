@@ -1,4 +1,5 @@
 import { ArrowRight, Users, BarChart2, Coins, ShieldCheck, Store, Ruler } from 'lucide-react'
+import SectionTitle from './SectionTitle'
 
 const domains = [
   {
@@ -45,24 +46,16 @@ const Domains = () => {
       <div className='mx-auto max-w-7xl px-4 lg:px-8'>
 
         {/* HEADER */}
-        <div className='mb-14 text-center'>
-          <p className='mb-2 text-xs font-semibold uppercase tracking-widest text-[#3B6D11]'>
-            Intervenants compétents
-          </p>
-          <h2 className='text-3xl font-black tracking-tight text-gray-900 lg:text-4xl'>
-            Nos domaines d'intervention
-          </h2>
-          <div className='mx-auto mt-4 h-[3px] w-9 rounded-full bg-[#0f7a3d]' />
-        </div>
+        <SectionTitle badge='Intervenants compétents' title="Nos domaines d'intervention" />
 
         {/* GRID */}
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {domains.map((domain) => {
             const Icon = domain.icon
             return (
               <div
                 key={domain.id}
-                className='group flex items-center gap-4 rounded-2xl  bg-white p-4 transition-all duration-150 ease-in-out hover:bg-gray-50 hover:shadow-lg border border-gray-200 shadow-md'
+                className='group flex items-center gap-4 rounded-2xl  bg-white p-4 transition-all duration-150 ease-in-out hover:bg-gray-50 hover:shadow-lg border border-gray-200 shadow-lg'
               >
 
                 {/* ICON */}

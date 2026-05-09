@@ -15,7 +15,7 @@ export const navLinks: NavLinksProps[] = [
   {
     id: 2,
     name: 'À propos',
-    href: '/a-propos',
+    href: '/about',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const navLinks: NavLinksProps[] = [
   {
     id: 4,
     name: 'Domaines',
-    href: '/domaines',
+    href: '/domains',
   },
   {
     id: 5,
