@@ -1,10 +1,12 @@
 import React from 'react'
 import Hero from './components/Hero'
+import Domains from './components/Domains'
 
 const HomePage = () => {
   return (
-    <main className='min-h-[300vh] bg-green-300 mt-20'>
+    <main className=' mt-20'>
       <Hero />
+      <Domains />
     </main>
   )
 }
