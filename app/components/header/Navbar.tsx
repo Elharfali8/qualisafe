@@ -4,10 +4,15 @@ import { navLinks } from '@/utils/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 import React from 'react'
 
-const Navbar = () => {
+type NavbarProps = {
+    isOpen: boolean
+    handleSidebar: () => void
+}
+
+const Navbar = ({isOpen, handleSidebar}: NavbarProps) => {
   const pathname = usePathname()
 
   return (
@@ -84,6 +89,19 @@ const Navbar = () => {
               <ArrowUpRight size={16} />
             </span>
           </button>
+        </div>
+
+        {/* MENU TOGGLE */}
+        <div className='grid lg:hidden place-items-center'>
+          {isOpen ? (
+            <button onClick={handleSidebar} className=' cursor-pointer bg-green-50 shadow p-1 rounded-lg'>
+            <X size={27} />
+              </button>
+          ) : (
+              <button onClick={handleSidebar} className=' cursor-pointer bg-green-50 shadow p-1 rounded-lg'>
+            <Menu size={27} />
+              </button>
+          )}
         </div>
       </nav>
     </header>
