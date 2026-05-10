@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Domains from './components/Domains'
 import ServicesSection from './components/ServicesSection'
 import SectorsSection from './components/SectorsSection'
+import ContactSection from './components/ContactSection'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Domains />
       <ServicesSection />
       <SectorsSection />
+      <ContactSection />
     </main>
   )
 }
