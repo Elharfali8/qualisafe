@@ -21,7 +21,7 @@ const ContactSection = () => {
     {
       id: 3,
       label: 'Adresse',
-      value: "Cocody, Abidjan - Côte d'Ivoire",
+      value: "ZINAYA-BUREAU 11, MENARA TARGA ZDOUGHIA MARRAKECH",
       icon: MapPin,
     },
   ]
@@ -30,7 +30,7 @@ const ContactSection = () => {
     <section className='bg-white py-24'>
       <div className='mx-auto max-w-7xl px-4 lg:px-8'>
 
-        <div className='relative overflow-hidden rounded-3xl border border-green-100 bg-[#f8faf8] p-5 shadow-xl shadow-green-100/20 lg:rounded-[40px] lg:p-10'>
+        <div className='relative rounded-3xl border border-green-100 bg-[#f8faf8] p-5 shadow-xl shadow-green-100/20 lg:rounded-[40px] lg:p-10'>
 
           {/* BACKGROUND LEAVES */}
           <Image
@@ -49,10 +49,10 @@ const ContactSection = () => {
           />
 
           {/* CONTENT — FIX: grid-cols-1 default, lg override */}
-          <div className='relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10'>
+          <div className='relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-10'>
 
             {/* LEFT SIDE */}
-            <div className='min-w-0'>
+            <div className='flex w-full min-w-0 flex-col'>
 
               {/* BADGE */}
               <span className='inline-flex rounded-full bg-green-100 px-4 py-1 text-sm font-bold uppercase tracking-wider text-[#0f7a3d]'>
@@ -72,13 +72,13 @@ const ContactSection = () => {
               </p>
 
               {/* INFOS */}
-              <ul className='mt-8 grid gap-3 lg:mt-10 lg:gap-4'>
+              <ul className='mt-8 grid w-full gap-3 lg:mt-10 lg:gap-4'>
                 {infos.map((item) => {
                   const Icon = item.icon
                   return (
                     <li
                       key={item.id}
-                      className='group flex items-start gap-4 rounded-2xl border border-green-100 bg-white/70 p-4 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-green-200 hover:bg-white hover:shadow-lg lg:p-5'
+                      className='group flex w-full items-start gap-4 rounded-2xl border border-green-100 bg-white p-4 shadow-sm transition-all duration-300 hover:border-green-200 hover:shadow-lg lg:p-5'
                     >
                       {/* ICON */}
                       <div className='grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-green-50 transition-all duration-300 group-hover:bg-[#0f7a3d] lg:h-14 lg:w-14 lg:rounded-2xl'>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                         <p className='text-xs font-bold uppercase tracking-wide text-[#0f7a3d] lg:text-sm'>
                           {item.label}
                         </p>
-                        <p className='mt-1 break-words text-sm font-medium leading-6 text-gray-800 lg:text-base'>
+                        <p className='mt-1 break-words text-xs lg:text-sm font-medium leading-6 text-gray-800 lg:text-base break-all'>
                           {item.value && item.value}
                           {item.numberOne && <span>{item.numberOne}</span>}
                           {item.numberTwo && (
@@ -109,7 +109,7 @@ const ContactSection = () => {
             </div>
 
             {/* RIGHT SIDE / FORM — FIX: min-w-0 prevents blowout */}
-            <div className='min-w-0 rounded-3xl border border-white/60 bg-white/90 p-5 shadow-2xl backdrop-blur-xl lg:rounded-[32px] lg:p-8'>
+            <div className='min-w-0 rounded-3xl border border-gray-100 bg-white p-5 shadow-md lg:rounded-[32px] lg:p-8'>
 
               <div className='mb-6 lg:mb-8'>
                 <h3 className='text-xl font-bold text-gray-900 lg:text-2xl'>
