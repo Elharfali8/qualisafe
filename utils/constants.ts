@@ -24,21 +24,11 @@ export const navLinks: NavLinksProps[] = [
   },
   {
     id: 4,
-    name: 'Domaines',
-    href: '/domains',
+    name: 'Secteurs',
+    href: '/sectors',
   },
   {
     id: 5,
-    name: 'Références',
-    href: '/references',
-  },
-  {
-    id: 6,
-    name: 'Ressources',
-    href: '/ressources',
-  },
-  {
-    id: 7,
     name: 'Contact',
     href: '/contact',
   },
